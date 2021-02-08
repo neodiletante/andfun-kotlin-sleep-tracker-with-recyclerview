@@ -144,6 +144,10 @@ class SleepTrackerViewModel(
         _navigateToSleepDataQuality.value = null
     }
 
+    private val _navigateToSleepDetail = MutableLiveData<Long>()
+    val navigateToSleepDetail
+        get() = _navigateToSleepDetail
+
     init {
         initializeTonight()
     }
@@ -240,6 +244,8 @@ class SleepTrackerViewModel(
         // Show a snackbar message, because it's friendly.
         _showSnackbarEvent.value = true
     }
+
+
 
     /**
      * Called when the ViewModel is dismantled.
